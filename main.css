@@ -1,116 +1,176 @@
 * {
   padding: 0;
+  /* Elimina el relleno por defecto de todos los elementos */
   margin: 0;
-  font-family:"League Spartan";
+  /* Elimina el margen por defecto de todos los elementos */
+  font-family: "League Spartan";
+  /* Aplica esta fuente a todo el documento */
 }
 
-body{
+body {
   background-color: white;
+  /* Fondo blanco general */
   display: flex;
+  /* Hace que body se comporte como contenedor flex */
   justify-content: center;
+  /* Centra horizontalmente los elementos hijos */
   align-items: center;
+  /* Centra verticalmente los elementos hijos */
   min-height: 100vh;
-  padding: 20px; 
+  /* Asegura que el body ocupe al menos toda la altura de la pantalla */
+  padding: 20px;
+  /* Espaciado interno para que el contenido no pegue contra los bordes */
 }
-section{
+
+section {
   padding: 40px;
+  /* Espaciado interno dentro de la sección */
   max-width: 900px;
+  /* Limita el ancho máximo para que no se vea muy estirado en pantallas grandes */
+
 }
 
 section .puntuacion,
-section .comentarios{
+section .comentarios {
   padding: 20px;
+  /* Espaciado interno para separación interna */
   display: flex;
+  /* Flex para ordenar horizontalmente */
   gap: 20px;
+  /* Espacio entre los elementos hijos */
 }
 
-section .puntuacion{
+section .puntuacion {
   gap: 50px;
+  /* Más separación específica solo para este bloque */
 }
 
-.puntuacion-titulares{
+.puntuacion-titulares {
   padding: 20px;
+  /* Espaciado interno */
   width: 50%;
+  /* Ocupa la mitad del contenedor flex */
 }
 
-.puntuacion-valoraciones{
+
+.puntuacion-valoraciones {
   padding: 20px;
   width: 50%;
   display: flex;
+  /* Flex para organizar las valoraciones */
   flex-direction: column;
+  /* Se acomodan en columna */
   justify-content: center;
+  /* Centra verticalmente los elementos hijos */
   gap: 5px;
+  /* Separación entre valoraciones */
 }
 
-.contenedor-valoracion{
+.contenedor-valoracion {
   display: flex;
-  background-color: rgb(247,242,248);
-   color: rgb(90,50,90);
+  /* Flex para ubicar estrellas y texto horizontalmente */
+  background-color: rgb(247, 242, 248);
+  /* Color de fondo */
+  color: rgb(90, 50, 90);
+  /* Color de texto */
   font-weight: bold;
+  /* Texto en negrita */
   padding: 10px;
   width: 90%;
+  /* Ancho relativo al contenedor padre */
   gap: 10px;
   justify-content: space-evenly;
+  /* Distribuye uniformemente los elementos */
   border-radius: 5px;
+  /* Bordes redondeados */
   margin-bottom: 16px;
+  /* Espacio entre cada valoracion */
 }
+
 .contenedor-valoracion:nth-child(1) {
   align-self: start;
+  /* Se alinea al principio */
 }
+
 .contenedor-valoracion:nth-child(2) {
   align-self: center;
+  /* Se alinea al centro */
 }
+
 .contenedor-valoracion:nth-child(3) {
   align-self: end;
-  
+  /* Se alinea al final */
+
 }
-.puntuacion-titulares h2{
-  color: rgb(90,50,90);
+
+.puntuacion-titulares h2 {
+  color: rgb(90, 50, 90);
   line-height: 40px;
+  /* Altura entre lineas del titulo */
   font-size: 40px;
+  /* Tamaño del texto */
   margin-bottom: 20px;
+  /* Espacio inferior */
 
 }
-.puntuacion-titulares p{
+
+.puntuacion-titulares p {
   font-weight: bold;
-  color:rgb(172,163,172);
+  color: rgb(172, 163, 172);
 }
 
-.profile .imagen{
+.profile .imagen {
   display: flex;
+  /* Flex para ubicar imagen y texto horizontalmente */
   gap: 20px;
+  /* Separacion entre imagen y texto */
 }
 
-.imagen p{
-  color:rgb(180,100,151);
+.imagen p {
+  color: rgb(180, 100, 151);
 }
-.profile img{
+
+.profile img {
   width: 45px;
+  /* Tamaño de la imagen de perfil */
   border-radius: 50%;
+  /* Lo hace redonda */
 }
-.profile{
-  background-color:rgb(90,50,90);
+
+.profile {
+  background-color: rgb(90, 50, 90);
   color: white;
   display: flex;
   flex-direction: column;
+  /* Organiza los elementos en columna */
   gap: 20px;
+  /* Espacio entre elementos internos */
   padding: 40px;
+  /* Espacio interno */
   border-radius: 10px;
   width: 260px;
+  /* Ancho fijo  */
   line-height: 20px;
+  /* Espacio entre linea de textos */
   width: 400px;
+  /* Ancho fijo  */
+  |
 }
 
-.comentarios{
+.comentarios {
   min-height: 300px;
+  /* Asegura una altura mínima para la sección de comentarios */
 }
-.comentarios .profile:nth-child(1){
-  align-self:flex-start;
+
+.comentarios .profile:nth-child(1) {
+  align-self: flex-start;
 }
-.comentarios .profile:nth-child(2){
+
+.comentarios .profile:nth-child(2) {
   align-self: center;
 }
-.comentarios .profile:nth-child(3){
+
+.comentarios .profile:nth-child(3) {
   align-self: flex-end;
 }
 
@@ -118,6 +178,8 @@ section .puntuacion{
 @media (max-width: 880px) {
   body {
     background-color: rgb(228, 62, 228);
+    /* Cambia el fondo para indicar versión tablet */
+
   }
 }
 
@@ -125,41 +187,55 @@ section .puntuacion{
 @media (max-width: 480px) {
   body {
     background-color: violet;
+    /* Cambia el fondo para indicar versión móvil */
+
   }
 
   section {
     padding: 0;
+    /* Elimina relleno para aprovechar mejor el espacio */
   }
 
   section,
   .puntuacion-titulares,
   .puntuacion-valoraciones {
     width: 100%;
+    /* Ocupan todo el ancho disponible */
   }
 
   section .puntuacion,
   section .comentarios {
     flex-direction: column;
+    /* En lugar de estar uno al lado del otro, se apilan */
   }
 
   section .puntuacion {
     text-align: center;
+    /* Centra el texto */
     gap: 0;
+    /* Elimina el espacio entre bloques */
   }
 
 
   .puntuacion-valoraciones .contenedor-valoracion {
     align-self: auto;
+    /* Quita alineaciones individuales */
     width: 100%;
+    /* Ocupa todo el ancho */
     flex-direction: column;
+    /* Se apilan las estrellas y el texto */
+
   }
 
   section .comentarios {
     display: block;
+    /* Cambia el flex a bloque para adapatar el contenido */
   }
 
   section .comentarios .profile {
     width: 100%;
+    /* Ocupa todo el ancho */
     margin-bottom: 10px;
+    /* Espacio entre tarjetas */
   }
 }
