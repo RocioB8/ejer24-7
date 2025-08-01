@@ -13,6 +13,7 @@ body{
 }
 section{
   padding: 40px;
+  max-width: 900px;
 }
 
 section .puntuacion,
@@ -59,4 +60,53 @@ section .puntuacion{
 }
 .contenedor-valoracion:nth-child(3) {
   align-self: end;
+}
+.puntuacion-titulares h2{
+  color: rgb(90,50,90);
+  line-height: 40px;
+  font-size: 40px;
+  margin-bottom: 20px;
+
+}
+.puntuacion-titulares p{
+  font-weight: bold;
+  color:rgb(172,163,172);
+}
+
+.profile .imagen{
+  display: flex;
+  gap: 20px;
+}
+
+.imagen p{
+  color:rgb(180,100,151);
+}
+.profile img{
+  width: 45px;
+  border-radius: 50%;
+}
+.profile{
+  background-color:rgb(90,50,90);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px;
+  border-radius: 10px;
+  width: 260px;
+  line-height: 20px;
+  width: 400px;
+}
+
+.comentarios{
+  min-height: 300px;
+}
+.comentarios .profile:nth-child(1){
+  align-self:flex-start;
+}
+.comentarios .profile:nth-child(2){
+  align-self: center;
+}
+.comentarios .profile:nth-child(3){
+  align-self: flex-end;
 }
