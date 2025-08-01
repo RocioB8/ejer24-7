@@ -1,0 +1,65 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+section {
+  padding: 20px;
+  background-color: white;
+}
+
+section .puntuacion,
+section .comentarios {
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+
+}
+
+section .puntuacion {
+  gap: 20px;
+}
+
+.puntuacion div {
+  padding: 10px 10px;
+  width: 50%;
+}
+
+.puntuacion-titulo {
+  padding: 20px;
+  color: rgb(82, 33, 80);
+}
+
+.puntuacion-valoraciones {
+  width: 50%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  
+
+}
+
+.contenedor-valoracion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border-radius: 15px;
+  background-color: rgb(246, 243, 247);
+  padding: 10px 20px;
+}
+
+.puntuacion-titulo h2 {
+  font-size: 45px;
+  width: 50%;
+  margin-bottom: 20px;
+  color: rgb(82, 33, 80);
+}
+
+.puntuacion-titulo p {
+  text-align: left;
+  width: 65%;
+  color: rgb(148, 141, 149);
+}
